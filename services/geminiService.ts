@@ -3,7 +3,7 @@ import { QuizQuestion } from "../types";
 
 /* ================= SAFE AI INIT ================= */
 const getAI = () => {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY || 'FAKE_API_KEY_FOR_DEVELOPMENT';
   if (!apiKey) {
     throw new Error("Gemini API key missing");
   }
